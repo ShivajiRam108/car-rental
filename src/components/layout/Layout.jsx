@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 import IconSidebar from './IconSidebar';
 import MainSidebar from './MainSidebar';
 import Header from './Header';
 
 const Layout = ({ children }) => {
-  const [activeItem, setActiveItem] = useState('Dashboard');
-
   return (
     <div className="flex h-screen bg-gray-50">
       <IconSidebar />
-      <MainSidebar activeItem={activeItem} setActiveItem={setActiveItem} />
+      <MainSidebar />
       
       <div className="flex-1 flex flex-col">
         <Header />

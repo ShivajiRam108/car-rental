@@ -1,9 +1,42 @@
 import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Users } from 'lucide-react';
 import { sidebarItems } from '../../data/sidebarItems';
 import { getSectionTitle } from '../../utils/helpers';
 
-const MainSidebar = ({ activeItem, setActiveItem }) => {
+const MainSidebar = () => {
+  const location = useLocation();
+  
+  // Map sidebar items to routes
+  const getRoutePath = (name) => {
+    const routeMap = {
+      'Dashboard': '/',
+      'Setup Currency': '/setup-currency',
+      'Contact Messages': '/contact-messages',
+      'Subscribers': '/subscribers',
+      'Car Types': '/car-types',
+      'Car Areas': '/car-areas',
+      'Cars': '/cars',
+      'Car Booking': '/car-booking',
+      'Booking History': '/booking-history',
+      'Payment Methods': '/payment-methods',
+      'User Management': '/user-management',
+      'User Verification': '/user-verification',
+      'Banned Users': '/banned-users',
+      'Analytics': '/analytics',
+      'Reports': '/reports',
+      'Announcements': '/announcements',
+      'Email Templates': '/email-templates',
+      'Notifications': '/notifications',
+      'Activity Logs': '/activity-logs',
+      'System Settings': '/system-settings',
+      'Security': '/security',
+      'Backup & Restore': '/backup-restore',
+      'Help & Support': '/help-support'
+    };
+    return routeMap[name] || '/';
+  };
+
   let currentSection = '';
 
   return (
@@ -35,6 +68,9 @@ const MainSidebar = ({ activeItem, setActiveItem }) => {
               currentSection = item.section;
             }
 
+            const routePath = getRoutePath(item.name);
+            const isActive = location.pathname === routePath;
+
             return (
               <div key={item.name}>
                 {showSectionTitle && getSectionTitle(item.section) && (
@@ -42,17 +78,19 @@ const MainSidebar = ({ activeItem, setActiveItem }) => {
                     {getSectionTitle(item.section)}
                   </div>
                 )}
-                <button
-                  onClick={() => setActiveItem(item.name)}
-                  className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg text-left transition-colors ${
-                    activeItem === item.name
-                      ? 'bg-slate-700 text-white'
-                      : 'text-slate-300 hover:bg-slate-700 hover:text-white'
-                  }`}
+                <NavLink
+                  to={routePath}
+                  className={({ isActive }) =>
+                    `w-full flex items-center space-x-3 px-3 py-2 rounded-lg text-left transition-colors ${
+                      isActive
+                        ? 'bg-slate-700 text-white'
+                        : 'text-slate-300 hover:bg-slate-700 hover:text-white'
+                    }`
+                  }
                 >
                   <item.icon className="w-5 h-5" />
                   <span className="text-sm">{item.name}</span>
-                </button>
+                </NavLink>
               </div>
             );
           })}
@@ -63,3 +101,4 @@ const MainSidebar = ({ activeItem, setActiveItem }) => {
 };
 
 export default MainSidebar;
+
