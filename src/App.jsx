@@ -1,8 +1,10 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import { ThemeProvider } from './components/FirstSidebars/ThemeContext';
 
 // Lazy load all page components for better performance
+
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const SetupCurrency = lazy(() => import('./pages/SetupCurrency'));
 const ContactMessages = lazy(() => import('./pages/ContactMessages'));
@@ -29,6 +31,7 @@ const HelpSupport = lazy(() => import('./pages/HelpSupport'));
 
 function App() {
   return (
+    <ThemeProvider>
     <Router>
       <Layout>
         <Suspense fallback={
@@ -68,6 +71,7 @@ function App() {
         </Suspense>
       </Layout>
     </Router>
+    </ThemeProvider>
   );
 }
 
