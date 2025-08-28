@@ -44,7 +44,7 @@ const Header = () => {
           <p className="text-gray-600">Welcome To Rentify Admin Panel</p>
         </div>
         <div className="flex items-center space-x-4">
-          <span className="text-sm text-gray-500">Dashboard</span>
+          {/* <span className="text-sm text-gray-500">  /Dashboard</span> */}
           <span className="text-gray-300"> </span>
           <span className="text-sm font-medium text-gray-900">{currentPage}</span>
         </div>
