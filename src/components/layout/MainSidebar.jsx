@@ -43,7 +43,7 @@ const MainSidebar = () => {
     <div className="w-64 bg-slate-800 text-white flex flex-col">
       {/* Brand Name */}
       <div className="p-4 border-b border-slate-700">
-        <h1 className="text-xl font-bold text-cyan-400">rentiPy</h1>
+        <h1 className="text-xl font-bold text-cyan-400">Shivaji-Brands</h1>
       </div>
 
       {/* User Profile */}
