@@ -2,6 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import { ThemeProvider } from './components/FirstSidebars/ThemeContext';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Lazy load all page components for better performance
 
@@ -28,6 +30,15 @@ const SystemSettings = lazy(() => import('./pages/SystemSettings'));
 const Security = lazy(() => import('./pages/Security'));
 const BackupRestore = lazy(() => import('./pages/BackupRestore'));
 const HelpSupport = lazy(() => import('./pages/HelpSupport'));
+
+
+const AddType = lazy(() => import('./features/types/AddType'));
+const AddArea = lazy(() => import('./features/areas/AddArea'));
+const AddCar = lazy(() => import('./features/cars/AddCar'));
+const NewBooking = lazy(() => import('./features/booking/NewBooking'));
+const PaymentMethodForm = lazy(() => import('./features/payments/PaymentMethodForm'));
+const AddUser = lazy(() => import('./features/users/AddUser'));
+const AddAnnouncement = lazy(() => import('./features/announcements/AddAnnouncement'));
 
 function App() {
   return (
@@ -66,11 +77,25 @@ function App() {
             <Route path="/security" element={<Security />} />
             <Route path="/backup-restore" element={<BackupRestore />} />
             <Route path="/help-support" element={<HelpSupport />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
+            {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
+
+
+             <Route path="/car-types/new" element={<AddType />} />
+              <Route path="/car-areas/new" element={<AddArea />} />
+              <Route path="/cars/new" element={<AddCar />} />
+              <Route path="/car-booking/new" element={<NewBooking />} />
+              <Route path="/payment-methods/new" element={<PaymentMethodForm />} />
+              <Route path="/user-management/new" element={<AddUser />} />
+              <Route path="/announcements/new" element={<AddAnnouncement />} />
+
+              
+              <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Suspense>
       </Layout>
+      <ToastContainer position="top-right" autoClose={3000} />
     </Router>
+    
     </ThemeProvider>
   );
 }

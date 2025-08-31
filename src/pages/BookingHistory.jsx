@@ -62,7 +62,7 @@ const BookingHistory = () => {
       key: 'amount', 
       label: 'Total Amount', 
       sortable: true,
-      render: (amount) => `$${amount}`
+      render: (amount) => `₹${amount}`
     }
   ];
 
@@ -93,7 +93,7 @@ const BookingHistory = () => {
           <Archive className="w-8 h-8 text-indigo-600" />
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Booking History</h1>
-            <p className="text-gray-600">Total Revenue: ${totalRevenue}</p>
+            <p className="text-gray-600">Total Revenue: ₹{totalRevenue}</p>
           </div>
         </div>
         <button

@@ -104,7 +104,7 @@ const Reports = () => {
     { label: 'Total Users', value: users.length, color: 'blue' },
     { label: 'Total Bookings', value: bookings.length, color: 'green' },
     { label: 'Total Cars', value: cars.length, color: 'purple' },
-    { label: 'Monthly Revenue', value: '$5,200', color: 'yellow' }
+    { label: 'Monthly Revenue', value: '₹ 5,200', color: 'yellow' }
   ];
 
   return (
@@ -174,7 +174,7 @@ const Reports = () => {
                     <div className="text-xs text-gray-600 space-y-1">
                       {Object.entries(generateReport(report.id)).map(([key, value]) => (
                         <div key={key} className="flex justify-between">
-                          <span>{key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}:</span>
+                          <span>{key.replace(/([A-Z])/g, ' ₹1').replace(/^./, str => str.toUpperCase())}:</span>
                           <span className="font-medium">{value}</span>
                         </div>
                       ))}

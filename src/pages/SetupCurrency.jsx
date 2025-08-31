@@ -1,7 +1,7 @@
 // import React, { useState } from 'react';
 import { currencies } from '../data/mockData';
 import { useLocalStorage } from '../hooks/useLocalStorage';
-import { Save, DollarSign } from 'lucide-react';
+import { Save, IndianRupee } from 'lucide-react';
 
 const SetupCurrency = () => {
   const [selectedCurrency, setSelectedCurrency] = useLocalStorage('selectedCurrency', 'USD');
@@ -21,7 +21,7 @@ const SetupCurrency = () => {
   return (
     <div className="space-y-6">
       <div className="flex items-center space-x-3">
-        <DollarSign className="w-8 h-8 text-green-600" />
+        <IndianRupee className="w-8 h-8 text-green-600" />
         <h1 className="text-2xl font-bold text-gray-900">Currency Setup</h1>
       </div>
 

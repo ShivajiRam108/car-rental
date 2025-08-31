@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BarChart3, TrendingUp, Users, Car, Calendar, DollarSign } from 'lucide-react';
+import { BarChart3, TrendingUp, Users, Car, Calendar,IndianRupee} from 'lucide-react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { mockUsers, mockCars, mockBookings } from '../data/mockData';
 
@@ -23,12 +23,12 @@ const Analytics = () => {
   const analyticsCards = [
     {
       title: 'Total Revenue',
-      value: `$${totalRevenue.toLocaleString()}`,
+      value: `₹${totalRevenue.toLocaleString()}`,
       change: '+12.5%',
       changeType: 'positive',
-      icon: DollarSign,
+      icon: IndianRupee,
       color: 'green'
-    },
+    }, 
     {
       title: 'Active Bookings',
       value: activeBookings,
@@ -151,7 +151,7 @@ const Analytics = () => {
                     ></div>
                   </div>
                 </div>
-                <span className="text-sm text-gray-600">${data.revenue}</span>
+                <span className="text-sm text-gray-600">₹{data.revenue}</span>
               </div>
             ))}
           </div>
