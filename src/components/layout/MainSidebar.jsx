@@ -16,6 +16,7 @@ const MainSidebar = () => {
       'Subscribers': '/subscribers',
       'Car Types': '/car-types',
       'Car Areas': '/car-areas',
+      'Locations' : '/locations',
       'Cars': '/cars',
       'Car Booking': '/car-booking',
       'Booking History': '/booking-history',

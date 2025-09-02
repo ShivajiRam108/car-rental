@@ -34,7 +34,7 @@ const IconSidebar = () => {
 
   return (
     <>
-      <div className="h-screen w-16 bg-gray-900 dark:bg-gray-950 text-white flex flex-col justify-between py-6 transition-colors duration-300">
+      <div className="h-screen w-10 bg-gray-900 dark:bg-gray-950 text-white flex flex-col justify-between py-6 transition-colors duration-300">
         {/* Top Section */}
         <div className="flex flex-col items-center gap-6">
           {/* Theme Toggle */}

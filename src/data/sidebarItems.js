@@ -28,6 +28,7 @@ export const sidebarItems = [
   { name: 'Subscribers', icon: Users, section: 'defaults' },
   { name: 'Car Types', icon: Car, section: 'cars' },
   { name: 'Car Areas', icon: MapPin, section: 'cars' },
+  {name : 'Locations', icon: MapPin, section:'cars'},
   { name: 'Cars', icon: Car, section: 'cars' },
   { name: 'Car Booking', icon: Calendar, section: 'booking' },
   { name: 'Booking History', icon: Archive, section: 'booking' },

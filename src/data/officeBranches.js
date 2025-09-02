@@ -1,0 +1,18 @@
+export const officeBranches = [
+  { name: "Hitech City", position: { lat: 17.4443, lng: 78.3789 } },
+  { name: "Kondapur", position: { lat: 17.4589, lng: 78.3846 } },
+  { name: "Madhapur", position: { lat: 17.4454, lng: 78.3813 } },
+  { name: "KPHB", position: { lat: 17.4947, lng: 78.4069 } },
+  { name: "Ameerpet", position: { lat: 17.4419, lng: 78.4485 } },
+  { name: "Miyapur", position: { lat: 17.4914, lng: 78.3755 } },
+  { name: "Gachibowli", position: { lat: 17.4401, lng: 78.3489 } },
+  { name: "Banjara Hills", position: { lat: 17.4140, lng: 78.4483 } },
+  { name: "Jubilee Hills", position: { lat: 17.4295, lng: 78.4070 } },
+  { name: "Begumpet", position: { lat: 17.4478, lng: 78.4717 } },
+  { name: "Secunderabad", position: { lat: 17.4399, lng: 78.4983 } },
+  { name: "LB Nagar", position: { lat: 17.3419, lng: 78.5520 } },
+  { name: "Uppal", position: { lat: 17.4056, lng: 78.5591 } },
+  { name: "Kukatpally", position: { lat: 17.4933, lng: 78.3995 } },
+  { name: "Mehdipatnam", position: { lat: 17.3840, lng: 78.4404 } },
+  { name: "Kamareddy", position: { lat: 18.3258, lng: 78.3409 } },
+];

@@ -37,7 +37,9 @@ const Header = () => {
   const currentPage = getPageName(location.pathname);
 
   return (
-    <header className="bg-blue-300 border-b border-blue-100 px-6 py-4">
+    // <header className="bg-blue-300 border-b border-blue-100 px-6 py-4">
+    // <header className="bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 text-gray-800 px-6 py-4 shadow-sm">
+    <header className="bg-white text-gray-800 border-b border-gray-200 px-6 py-4 shadow-sm"> 
 
       <div className="flex items-center justify-between">
         <div>
