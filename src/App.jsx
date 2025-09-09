@@ -42,13 +42,14 @@ const AddAnnouncement = lazy(() => import('./features/announcements/AddAnnouncem
 
 // 🔥 NEW Login & Signup imports
 const Login = lazy(() => import("./pages/Login"));
+const Register = lazy(() => import("./pages/Register"));
 
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
-        <Suspense
+        <Suspense 
           fallback={
             <div className="flex items-center justify-center h-64">
               <div className="text-center">
@@ -61,6 +62,7 @@ function App() {
           <Routes>
             {/* Public Routes */}
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
 
             {/* Protected/Admin Layout Routes */}
             <Route element={<Layout />}>

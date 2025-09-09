@@ -61,7 +61,10 @@ const MainSidebar = () => {
       </div>
 
       {/* Navigation - Scrollable */}
-      <div className="flex-1 overflow-y-auto py-4">
+      <div className="flex-1 overflow-y-auto py-4" style={{
+    scrollbarWidth: 'none',         // Firefox
+    msOverflowStyle: 'none',        // IE and Edge
+  }}>
         <nav className="space-y-1 px-2">
           {sidebarItems.map((item) => {
             const showSectionTitle = currentSection !== item.section;
